@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="HTML 5, CSS 3,Javascript, JQuery, AngularJs">
+        <meta name="description" content="Dynamic Web Development">
+        <meta name="author" content="Maria-goretti">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+        <script src="../scripts/validatepersonalinfo.js"></script>
+        <style>
+            span{
+                color: red;
+            }
+            div{
+                border: solid 5px rgb(233, 21, 21);
+            }
+            h3{
+                background-color: rgb(240, 154, 154);
+            }
+            h5{
+                background-color: rgb(180, 161, 161);
+            }
+            table, th, td {
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <nav class="topnav">
+            <ul>
+                <li style="float: left;"><a href="#">Register New Client</a></li>
+               <li><a href="../index.html">Home</a></li>
+               <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+        <section>
+            <nav class="col-3">
+                <ul>
+                    <li><a href="patientpage.html">Personal Information</a></li>
+                    <li><a href="form2.html">Risk Factor Information</a></li>
+                    <li><a href="form3.html">Hepatitis B Pregnant Women Reporting</a></li>
+                    <li><a href="form4.html">Congenital Syphilis</a></li>
+                    <li><a href="form5.html">Chlamydia & Gonorrhea</a></li>
+    
+        <article class="col-9">
+        
+            <h4>Washington Country Department of Health and Human Services</h4>
+            <p>Return completed form to Washington County Public Health Disease Control and Prevention</p>
+            <p>FAX: 503-846-3664   * Call with questions: 503-846-2972</p>
+            <h2>STI Case Reporting Form for Chlamydia and Gonorrhea</h2>
+            <h3>Clinic Information</h3>
+            <form method="post" name="personalinfo" onsubmit="return validatepersonalinfo();" autocomplete="off">
+            <table style="width: 80%;">
+                <tr>
+                    <th>Date:</th>
+                    <td><input type="date" name="dateofreport" id="dateofreport"><span id="dateofreportErr"></span></td>
+                    <th>Person Completing the form: </th>
+                    <td><input type="text" name="nameofreporter" id="nameofreporter"><span id="nameofreporterErr"></span></td>
+                </tr>
+                <tr>
+                    <th>Health Provider</th>
+                    <td><input type="text" name="hp" id="hp"><span id="hpErr"></span></td>
+                    <th>Contact Phone Number / Fax :</th>
+                    <td><input type="tel" id="fax" name="fax"><span id="faxErr"></span></td>
+                </tr>
+            </table>
+            
+            
+            <p>Your lab reported a communicable disease on the patient shown below and listed you as a Provider.
+                The Oregon Department of Human Services and Washington County require additional information. The fax cover sheet you have received references Oregon
+                law(ORS 433) that requires you to report this information.
+                <b>Please complete the form <u>within 24hours</u>,or by the end of the next working day,and fax it back to our office at 503-846-3664</b>. 
+                If you prefer you may call to report the required information.We appreciate your cooperation and prompt handling of this confidential report.
+            </p>
+            <h3>Patient Information - Please complete all information requested below</h3>
+        
+            <table style="width: 100%;">
+                <tr>
+                    <th>NAME :</th>
+                    <td><input type="text" id="name" name="name" onblur="return validatefn();"><span id="nameErr"></span></td>
+                    <th>DATE OF DATE:</th>
+                    <td><input type="date" id="dob" name="dob" /><span id="dobErr"></span></td>
+                    <th>GENDER:</th>    
+                    <td><input type="radio" id="gender" name="gender">male</td><span id="genderErr"></span>
+                    <td><input type="radio" id="gender" name="gender" >female</td><span id="genderErr"></span>
+                    <td><input type="radio" id="gender" name="gender" >other</td><span id="genderErr"></span>
+                </tr>
+            
+            <tr>  
+            <th>HOME:</th>
+            <td><input type="text" id="home" name="home"></td>
+            <th>CITY:</th>
+            <td><input type="text" id="city" name="city" ></td>
+            <th>ZIP:</th>
+            <td><input type="number" id="zip" name="zip" ></td><br>
+            </tr>
+            
+            <tr>
+            <th>PHONE NUMBER:</th>
+            <td><input type="tel" id="tel" name="tel" placeholder="(123)-567-8901" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}"></td>
+            <th>Alternative:</th>
+            <td><input type="tel" id="alt" name="alt" placeholder="(123)-567-8901" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+            </tr>
+            <tr>
+            <th>PREGNANCY TEST RESULTS:</th>
+            <td><input type="radio" id="pt" name="pt" value="n/a">N/A </td>
+            <td><input type="radio" id="pt" name="pt" value="negative">Negative </td>
+            <td><input type="radio" id="pt" name="pt" value="unk">Unknown </td>
+            <td><input type="radio" id="pt" name="pt" value="positive">Positive: </td> 
+            
+            <td><input type="text" id="pt" name="pt" ><b>If positive,how many weeks?</b></td>
+        <td></td>
+        <td></td>
+
+            </tr>
+            
+                
+                
+                    <tr>
+                    <th>ETHNICITY:</th>
+                    <td><input type="radio" id="ethnic" name="ethnic" value="hispanic or latino">Hispanic or Latino</td><span id="ethnicErr"></span>
+                    <td><input type="radio" id="ethnic" name="ethnic" value="non hispanic or latino">Non-Hispanic or Latino</td><span id="ethnicErr"></span><br>
+                    <td><input type="radio" id="ethnic" name="ethnic" value="unk">unk</td><span id="ethnicErr"></span><br>
+                    </tr>
+             <tr>
+         <th>RACE:</th>
+        <td><input id="race" name="race" type="radio" value="American">American Indian/Alaskan Native</td><span id="raceErr"></span>
+        <td><input id="race" name="race" type="radio" value="asian">Asian</td><span id="raceErr"></span>
+        <td><input id="race" name="race" type="radio" value="black">Black/African Am.<br></td><span id="raceErr"></span>
+        <td><input type="radio" id="ethnic" name="ethnic" value="Alaskan">Alaskan</td><span id="raceErr"></span>
+        <td><input id="race" name="race" type="radio" value="native">Native Hawaiian/Pacific Islander</td><span id="raceErr"></span>
+        <td><input id="race" name="race" type="radio" value="white">White</td><br/><span id="raceErr"></span>
+        <td><input id="race" name="race" type="radio" value="unk">Ukn</td><span id="raceErr"></span>
+        <td><input id="race" name="race" type="radio" value="other">Other </td><br><span id="raceErr"></span>
+             </tr>
+             <tr>
+        <th>GENDER OF SEX PARTNER(S):</th>
+        <td><input type="radio" id="sp" name="sp" value="MAle">male</td><span id="spErr"></span>
+        <td><input type="radio" id="sp" name="sp" value="femalele">Female</td><span id="spErr"></span>
+        <td><input type="radio" id="sp" name="sp" value="both">both</td><span id="spErr"></span>
+        <td><input type="radio" id="sp" name="sp" value="unk">Unk</td><br><span id="spErr"></span>
+        <td></td>
+        <td></td>
+        <td></td>
+
+             </tr>
+
+        <tr>
+            <th>Test Result Type:</th>
+            <td><input name="testresult" type="checkbox"  id="testresult"/>Chlamydia Positive Result</td>
+            <th>Date:</th>
+            <td><input type="date" name="dop"/></td>
+            <td><input name="testresult" type="checkbox"  id="testresult"/>Gonorrhea Positive Result</td><span id="testresultErr"></span>
+            <th>Date:</th>
+            <td><input type="date" name="dop"/></td>
+
+            
+            <td></td>
+            <th>Previous HIV Testing:</th>
+            <td><input name="hivtesting" type="checkbox"  id="hivtesting"/>Yes</td>
+            <td><input name="hivtesting" type="checkbox"  id="hivtesting"/>No</td>
+            <td><input name="hivtesting" type="checkbox"  id="hivtesting"/>Unknown</td>
+          </tr>
+          
+            
+            <th>If yes, last result was?</th>
+        <td></td>
+
+            <td><input name="hivtesting" type="checkbox"  id="hivtesting"/>POS</td>
+            <td><input name="hivtesting" type="checkbox"  id="hivtesting"/>NEG</td>
+            <td><input name="hivtesting" type="checkbox"  id="hivtesting"/>Unknown</td>
+           </tr>
+          <tr>
+            
+            
+            <th>Date:</th>
+            <td><input type="date" name="dop"/></td>
+            <td></td>
+            <th>Month of last test</th>
+            <td><input type="text" name="monthoftest"/></td>
+            <td></td>
+            <th>Year of last test</th>
+            <td><input type="text" name="yearoftest"/></td>
+          </tr>
+            
+        <tr>
+        <th>REASON FOR EXAM:</th>
+        <td><input type="radio" id="exam" name="exam" value="symptomatic">Symptomatic </td><span id="examErr"></span>
+        <td><input type="radio" id="exam" name="exam" value="routine exam">Routine Exam </td><span id="examErr"></span>
+        <td><input type="radio" id="exam" name="exam" value="test for cure">Test for Cure  </td><span id="examErr"></span>
+        <td><input type="radio" id="exam" name="exam" value="exposed to infection">Exposed to Infection </td><span id="examErr"></span>
+        <td><input type="radio" id="exam" name="exam" value="pregnant">Pregnant</td><span id="examErr">
+            <td></td>
+            <td></td>
+            <td></td>
+        
+        </tr>
+        <tr>
+        <th>DIAGNOSIS:</th>
+        <td><input type="radio" id="dia" name="dia">Asymptomatic</td><span id="diaErr"></span>
+        <td><input type="radio" id="dia" name="dia">Symptomatic-Uncomplicated</td><span id="diaErr"></span>
+        <td><input type="radio" id="dia" name="dia">Pelvic Inflammatory Disease (PID)</td><span id="diaErr"></span>
+        <td><input type="radio" id="dia" name="dia">Ophthalmia /Conjunctivitis</td><span id="diaErr"></span>
+        <td><input type="radio" id="dia" name="dia">Disseminated</td><span id="diaErr"></span>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        </tr>
+        <tr>
+        <th>SITE(S):</th>
+       <td><input type="radio" id="site" name="site">Cervix</td><span id="siteErr"></span>
+        <td><input type="radio" id="site" name="site">Vaginal</td><span id="siteErr"></span>
+        <td><input type="radio" id="site" name="site">Urethra</td><span id="siteErr"></span>
+        <td><input type="radio" id="site" name="site">Rectum</td><span id="siteErr"></span>
+        <td><input type="radio" id="site" name="site">Ocular</td><span id="siteErr"></span>
+        <td><input type="radio" id="site" name="site">Urine</td><span id="siteErr"></span>
+        <td><input type="radio" id="site" name="site">Pharynx</td><span id="siteErr"></span>
+        <td><input type="radio" id="site" name="site">Other:</td><span id="siteErr"></span>
+        </tr>
+            </table>    
+
+            
+        <table style="width: 100%;">
+               
+        <tr>
+            
+            <th><h3>GONORRHEA TREATMENT PLAN:</h3></th> 
+            <th></th>
+            <th></th>
+            
+            <th><h3>CHLAMYDIA TREATMENT PLAN:</h3></th>
+            <th></th>
+                    
+                </tr>
+               
+              <tr>
+                <td><input name="gplan" type="checkbox"  id="gplan"/>Rocephin/Ceftriaxone 250mg IM x 1</td>
+                <td><input type="date" id="d" ></td>
+                <td></td>
+                <td><input name="gplan" type="checkbox"  id="gplan"/>Azithromycin 1gm orally in a single dose.</td>
+                <td><input type="date" id="d"></td>
+            </tr><br>
+            <tr>
+                <td><b>PLUS</b></td>
+                <td></td>
+                <td></td>
+                <td><b>OR</b></td>
+
+
+            </tr>
+              <tr>
+                
+                <td><input name="cplan" type="checkbox"  id="cplan"/>Azithromycin 1gm orally in a single dose</td>
+                <td></td>
+                <td></td>
+                <td><input name="cplan" type="checkbox"  id="cplan"/>Doxycyline 10omg BID x 7 days.</td>
+                <td><input type="date" id="d"></td>
+              </tr>
+            
+              <tr>
+                <th>Alternative Treatment Regimens</th> 
+                <th></th>
+                <th></th>
+                
+                <th>Alternative Treatment Regimens</th>
+                <th></th>
+                        
+                    </tr>
+
+
+        
+        <tr>
+            <td><input type="checkbox" id="alternative"> Cefixime 400mg orally in a single dose.</td>
+            <td><input type="date" id="date"  name="date"></td>
+            <td></td>
+        
+            <td><input type="checkbox" id="alternative"> Amoxicillin 500mg orally tid &times; 7 days</td>
+            <td><input type="date" id="date"  name="date"></td>>
+        </tr>
+        <tr>
+            <td><b>PLUS</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="alt">Azithromycin 1gm orally in a single dose</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" id="other" name="other">Other Treatment:</td>
+        <td><input type="date" id="date"  name="date"></td>
+        <td></td>
+        
+        <td><input type="text" id="other" name="other">Other Treatment:</td>
+        <td><input type="date" id="date"  name="date"></td>
+        
+        </tr>
+        </table>
+     <table>
+        <label for="not"><b>IF NOT TREATED YET-PATIENT NOTIFED OF INFECTION</b></label>
+        <input type="radio" id="not" name="not">Yes 
+        <input type="radio" id="not" name="not">No<br>
+    </table>
+        <label><b>Does the provider need assistance in contacting a client that has not responded for Treatment?</b></label>
+        <input type="radio" id="not" name="not">Yes 
+        <input type="radio" id="not" name="not">No<br>
+        <h3>PARTNER MANAGEMENT PLAN - Ensuring Partner Treatment</h3>
+        <label><b>Expedited Partner Therapy dispensed at time of visit?</b></label>
+        <input type="radio" id="not" name="not">No
+        <input type="radio" id="not" name="not">YES: How many partners?<br>
+        <p><b>(see:OHA/STD Prevention for EPT guidelines and policy).</b></p>
+        <hr>
+        <p>When resources allow the health department will be contacting gonorrhea cases and high risk chlamydia cases to offer partner services.</p>
+        <p>Please notify patient that public health worker may be contacting them to offer partner services.</p>
+        <input type="checkbox" id="check" name="check">PROVIDER REQUEST THAT CLIENT NOT BE CONTACTED BY PUBLIC HEALTH/PROVIDER WILL ASSURE PARTNER TREATMENT.
+        <input type="submit" name="submit" value="Submit"><br><br>
+        
+    </table>
+    </form>
+        
+        <footer>
+            <p><b>CURRENT RECOMMENDED TREATMENT- See CDC Guidelines at: www.cdc.gov/std/treatment/</b></p>
+
+        </footer>
+        <p>STI CT,GC Case Reporting Form,07/16</p>
+    </article>
+    </section>
+
+
+    </body>
+</html>
