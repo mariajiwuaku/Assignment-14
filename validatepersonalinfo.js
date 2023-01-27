@@ -99,7 +99,9 @@ try{
             if(name){
                 let x = namepattern.test(name);
                 if(x==false){
-                    document.getElementById('nameErr').innerHTML ="<br>Name can only contain letters and white space"
+                   document.getElementById('nameErr').innerHTML ="<br>Name can only contain letters and white space";
+                    document.forms.personalinfo.name.focus();
+
                 }
             }
             
